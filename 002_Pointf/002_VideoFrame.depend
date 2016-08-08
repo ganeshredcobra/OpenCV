@@ -1,8 +1,0 @@
-# depslib dependency file v1.0
-1470672844 source:/home/ganesh/Version_Control/OpenCV/002_VideoFrame/main.cpp
-	<iostream>
-	<opencv2/core/core.hpp>
-	<opencv2/imgproc/imgproc.hpp>
-	<opencv2/highgui/highgui.hpp>
-	"opencv2/imgcodecs.hpp"
-
