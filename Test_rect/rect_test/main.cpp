@@ -74,7 +74,7 @@ int main(int argc, char *argv[])
 {
     Point2f rect_points[4];
     Point2f lastrect_points[4];
-
+    int last_view_x,last_view_y;
     int view_width = 200;
     int view_height= 100;
     int aPillarAngle = 0;
@@ -94,8 +94,11 @@ int main(int argc, char *argv[])
     while(true)
     {
         img = imread("lena.jpg", CV_LOAD_IMAGE_COLOR);
-        view_x = Point_x;
-        view_y = Point_y;
+        if(!Check1)
+        {
+            view_x = Point_x;
+            view_y = Point_y;
+        }
         RotatedRect rRect = RotatedRect(Point2f(view_x, view_y), Size(/*325*/view_width, view_height), aPillarAngle);
         rRect.points(rect_points);
         CB=Check_Boundary(rect_points);
@@ -109,6 +112,8 @@ int main(int argc, char *argv[])
                 Check2 = false;
                 Check3 = false;
             }
+            last_view_x = view_x;
+            last_view_y = view_y;
             memcpy(lastrect_points, rect_points, sizeof(lastrect_points));
             for (int j = 0; j < 4; j++)
             {
@@ -119,6 +124,8 @@ int main(int argc, char *argv[])
         {
             //cout<<"Rect Points  is:"<<rect_points[0]<<" "<<rect_points[1]<<" "<<rect_points[2]<<" "<<rect_points[3]<<endl;
             //cout<<"Last Rect Points  is:"<<lastrect_points[0]<<" "<<lastrect_points[1]<<" "<<lastrect_points[2]<<" "<<lastrect_points[3]<<endl;
+            view_x = last_view_x;
+            view_y = last_view_y;
             for (int j = 0; j < 4; j++)
             {
                 line(img, lastrect_points[j], lastrect_points[(j + 1) % 4], (255, 0, 0), 1, 8);
