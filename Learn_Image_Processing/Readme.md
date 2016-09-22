@@ -3,15 +3,25 @@
 - [ ] Read and Display an Image
 - [ ] Basic Data tyes
 	- [ ] Mat
+	- [ ] Point
+	- [ ] Size
+	- [ ] Rect
 - [ ] Drawing basic Shapes on Image
-	- [ ] Rectange
+	- [ ] Line
+	- [X] Rectange
+		- [X] Using Rect
+		- [ ] Using line
+		- [ ] Using rectangle
+		- [X] Inside rect
 	- [ ] Circle
 	- [ ] Ellipse
 	- [ ] Roatated rectange
 	- [ ] Bounding rectange
-- [ ] User Interaction
-	- [ ] Mouse
-	- [ ] Trackbar
-	- [ ] Radio Button
-	- [ ] Push Button
-	- [ ] Checkbox
+- [X] User Interaction
+	- [X] Mouse
+		- [X] Scrolling event
+		- [X] Click Left and right
+	- [X] Trackbar
+	- [X] Radio Button
+	- [X] Push Button
+	- [X] Checkbox
