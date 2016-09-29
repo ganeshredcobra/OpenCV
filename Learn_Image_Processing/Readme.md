@@ -25,3 +25,4 @@
 	- [X] Radio Button
 	- [X] Push Button
 	- [X] Checkbox
+- [X] Measuring Time
