@@ -26,3 +26,9 @@
 	- [X] Push Button
 	- [X] Checkbox
 - [X] Measuring Time
+- [X] Image Operations
+	- [X] Matlab Style Intialization
+		- [X] eye
+		- [X] Ones
+		- [X] Zeros
+	- [X] Copy vs Clone
