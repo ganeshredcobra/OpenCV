@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <stdio.h>
+#include <thread>
 
 using namespace std;
 using namespace cv;
@@ -60,9 +61,11 @@ int main() {
 
   face_cascade.load("haarcascade_frontalface_alt.xml"); // load faces
   eyes_cascade.load("haarcascade_eye_tree_eyeglasses.xml"); // load eyes
+  thread t1(detectFaces, frame);
+		t1.detach();
 
   while(cap.read(frame)) {
-    detectFaces(frame); // Call function to detect faces
+    //detectFaces(frame); // Call function to detect faces
     if( waitKey(30) >= 0)    // pause
       break;
   }
