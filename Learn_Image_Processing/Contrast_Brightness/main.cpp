@@ -17,7 +17,7 @@ int main( int argc, char** argv )
  std::cout<<"-------------------------"<<std::endl;
  std::cout<<"* Enter the alpha value [1.0-3.0]: ";std::cin>>alpha;
  std::cout<<"* Enter the beta value [0-100]: "; std::cin>>beta;
-
+#ifdef TEST
  /// Do the operation new_image(i,j) = alpha*image(i,j) + beta
  for( int y = 0; y < image.rows; y++ )
     { for( int x = 0; x < image.cols; x++ )
@@ -28,6 +28,9 @@ int main( int argc, char** argv )
              }
     }
     }
+#endif // TEST
+
+image.convertTo(new_image, -1, alpha, beta);
 
  /// Create Windows
  namedWindow("Original Image", 1);
