@@ -32,3 +32,10 @@
 		- [X] Ones
 		- [X] Zeros
 	- [X] Copy vs Clone
+	- [X] crop
+	- [X] Flip Image
+	- [X] Split Channels
+	- [X] Merge Channels
+	- [X] Min and Max Loc
+	- [X] Check Image data
+	- [X] Count Non zero pixels
